@@ -21,14 +21,24 @@ const SelectFieldExampleFloatingLabel = React.createClass({
   handleChange(event, index, value) {
     return this.setState({value})
     },
-    onFocus(){
-      console.log('focus', event)
+    onFocus(event){
+
+      //event.persist()
+      let el = React.findDOMNode(this);
+      const t = event.target
+      //this.requestClose('clickAway');
+      console.log('focus', event.target, t, el, this.refs.select,this.props, this.state)
+
+      //ev = new Event({type:'open'})
+      //t.dispatchEvent(ev)
+
     },
 
   render() {
     return (
       <div>
         <SelectField
+          ref="select"
           value={this.state.value? this.state.value : 1}
           tabIndex="0"
           onChange={this.handleChange}
