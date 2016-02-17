@@ -31,7 +31,17 @@
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-mounter": "^1.0.0",
-    "react-tap-event-plugin": "^0.2.2"
+    "react-tap-event-plugin": "^0.2.2",
+    "inline-style-prefixer": "^0.6.6",
+    "lodash.flowright": "^3.2.1",
+    "lodash.merge": "^3.3.2",
+    "lodash.throttle": "~3.0.4",
+    "react-addons-create-fragment": "^0.14.0",
+    "react-addons-pure-render-mixin": "^0.14.0",
+    "react-addons-transition-group": "^0.14.0",
+    "react-addons-update": "^0.14.0",
+    "simple-assign": "^0.1.0",
+    "warning": "^2.1.0"
   },
   "private": true
 }

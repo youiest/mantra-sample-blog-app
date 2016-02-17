@@ -2,6 +2,8 @@ import React from 'react';
 import SelectField from 'material-ui/lib/select-field';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import { Component, PropTypes } from 'react'
+var injectTapEventPlugin = require("react-tap-event-plugin");
+injectTapEventPlugin();
 const items = [
   <MenuItem key={1} value={1} primaryText="Never"/>,
   <MenuItem key={2} value={2} primaryText="Every Night"/>,
@@ -10,7 +12,7 @@ const items = [
   <MenuItem key={5} value={5} primaryText="Weekly"/>,
 ];
 
-var SelectFieldExampleFloatingLabel = React.createClass({
+const SelectFieldExampleFloatingLabel = React.createClass({
   getInitialState() {
     return {
       state: {value: null},
