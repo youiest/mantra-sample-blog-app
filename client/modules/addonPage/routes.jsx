@@ -4,7 +4,7 @@ import {mount} from 'react-mounter';
 import MainLayout from './components/main_layout.jsx';
 import PostList from './containers/postlist';
 import Post from './containers/post';
-import NewPost from './containers/newpost';
+import SelectFieldExampleFloatingLabel from './containers/addonPage';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -12,10 +12,8 @@ export default function (injectDeps, {FlowRouter}) {
   FlowRouter.route('/testselect', {
     name: 'newpost',
     action() {
-      console.log("message");
-
       mount(MainLayoutCtx, {
-        content: () => (<NewPost/>)
+        content: () => (<SelectFieldExampleFloatingLabel/>)
       });
     }
   });
