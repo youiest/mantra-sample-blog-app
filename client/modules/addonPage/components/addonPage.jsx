@@ -24,17 +24,13 @@ const SelectFieldExampleFloatingLabel = React.createClass({
 
   render() {
     return (
-      <div>
-        <SelectField
-          value={this.state.value? this.state.value : 1}
-          onChange={this.handleChange}
-          floatingLabelText="Floating Label Text"
+      <div
+
         >
-          {items}
-        </SelectField>
-        <br />
         <SelectField
-          value={this.state.value}
+          onKeyDown={console.log(event)}
+          tabIndex="0"
+          value={this.state.value? this.state.value : 1}
           onChange={this.handleChange}
           floatingLabelText="Styled Floating Label Text"
           floatingLabelStyle={{color: 'red'}}
