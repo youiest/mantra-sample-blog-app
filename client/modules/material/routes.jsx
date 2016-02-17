@@ -9,8 +9,8 @@ import NewPost from './containers/newpost';
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  FlowRouter.route('/material', {
-    name: 'material',
+  FlowRouter.route('/landing', {
+    name: 'landing',
     action() {
       mount(MainLayoutCtx, {
         content: () => (<PostList />)
