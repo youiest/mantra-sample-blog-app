@@ -10,7 +10,7 @@ function ctrl_c() {
         #kill -9 `ps ax | grep meteor | grep 7001 | awk '{print $1}'` &
         #kill -9 `ps ax | grep meteor | grep 6001 | awk '{print $1}'` &
         #kill -9 `ps ax | grep meteor | grep 5001 | awk '{print $1}'` &
-        kill -9 `ps ax | grep 5005 | awk '{print $1}'` &
+        kill -9 `ps ax | grep meteor | grep 5005 | awk '{print $1}'` &
         #kill -9 `ps ax | grep meteor | awk '{print $1}'` &
 }
 
