@@ -18,21 +18,31 @@ const SelectFieldExampleFloatingLabel = React.createClass({
       state: {value: null},
     };
   },
+  getDefaultProps() {
+    return {
+      openImmediately: false,
+    };
+  },
   handleChange(event, index, value) {
     return this.setState({value})
     },
-    onFocus(event){
+  onFocus(event){
+    this.render(this ,<SelectFieldExampleFloatingLabel openImmediately={true} />)
+    //event.persist()
+    //this.setState({open:true})
+    //let el = React.findDOMNode(this);
+    //const t = event.target
+    //this.requestClose('clickAway');
+    //this.setProps({openImmediately:true})
+    //this.props.openImmediately = true
+    //t.props.openImmediately = true
 
-      //event.persist()
-      let el = React.findDOMNode(this);
-      const t = event.target
-      //this.requestClose('clickAway');
-      console.log('focus', event.target, t, el, this.refs.select,this.props, this.state)
+    //console.log('focus', event.target, t, el, this.refs.select,this.props, this.state, this, React.PropTypes.func)
 
-      //ev = new Event({type:'open'})
-      //t.dispatchEvent(ev)
+    //ev = new Event({type:'open'})
+    //t.dispatchEvent(ev)
 
-    },
+  },
 
   render() {
     return (
