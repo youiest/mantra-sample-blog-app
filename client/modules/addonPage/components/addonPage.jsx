@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import SelectField from 'material-ui/lib/select-field';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import { Component, PropTypes } from 'react'
@@ -20,14 +21,23 @@ const SelectFieldExampleFloatingLabel = React.createClass({
   },
   getDefaultProps() {
     return {
-      openImmediately: false,
+      //openImmediately: true,
+      //open: true
     };
   },
   handleChange(event, index, value) {
     return this.setState({value})
     },
   onFocus(event){
-    this.render(this ,<SelectFieldExampleFloatingLabel openImmediately={true} />)
+    //this.refs.select
+    //ReactDOM.findDOMNode(event.target).click()
+    ReactDOM.findDOMNode(this.refs.select).click()
+    //console.log(ReactDOM.findDOMNode(event.target))
+    // this.setState({open:true})
+    // this.setState({value: event.target.value +1}) // works
+    //this.state.value = this.state.value + 1
+    //this.setState({value: this.state.value+1})
+    //this.render(this ,<SelectFieldExampleFloatingLabel openImmediately={true} />)
     //event.persist()
     //this.setState({open:true})
     //let el = React.findDOMNode(this);
@@ -37,7 +47,7 @@ const SelectFieldExampleFloatingLabel = React.createClass({
     //this.props.openImmediately = true
     //t.props.openImmediately = true
 
-    //console.log('focus', event.target, t, el, this.refs.select,this.props, this.state, this, React.PropTypes.func)
+    //console.log('focus', event.target = this.refs.select,this.props, this.state,'PropTypes', React.PropTypes.func, this.state.value)
 
     //ev = new Event({type:'open'})
     //t.dispatchEvent(ev)
